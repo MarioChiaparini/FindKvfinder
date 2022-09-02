@@ -5,7 +5,7 @@ from rdkit.Chem import rdFMCS
 from rdkit.Chem import AllChem
 
 v = Vina(sf_name='vina')
-lig = Chem.MolFromMolFile('/home/ABTLUS/mario.neto/Desktop/ligantes/ligante5kdir.sdf',sanitize=False)
+lig = Chem.MolFromMolFile('../ligantes/ligante5kdir.sdf',sanitize=False)
 
 for conf in lig.GetConformers():
 
@@ -14,8 +14,8 @@ for conf in lig.GetConformers():
     y = centroid[1]
     z = centroid[2]
 
-v.set_receptor('/home/ABTLUS/mario.neto/Desktop/receptores/5kdirout.pdbqt')
-v.set_ligand_from_file('/home/ABTLUS/mario.neto/Desktop/ligantes/outligand.pdbqt')
+v.set_receptor('../Desktop/receptores/5kdirout.pdbqt')
+v.set_ligand_from_file('../Desktop/ligantes/outligand.pdbqt')
 print("x: %f",x)
 print("y: %f",y)
 print("z: %f",z)
